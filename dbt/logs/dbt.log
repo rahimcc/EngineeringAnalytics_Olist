@@ -1,0 +1,36 @@
+==================== 2026-04-01T15:39:12.178832Z | 019d49b2-ddb0-7291-a7cb-bb95cb2c8df1 ====================
+15:39:12.179092 [info ]: Installing dbt project and profile setup
+15:39:12.182342 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+15:39:12.182505 [info ]: Success Project created successfully!
+15:39:12.182528 [info ]: Info Project name: jaffle_shop
+15:39:12.182536 [info ]: Info Project directory: jaffle_shop
+15:39:12.182555 [info ]: Info Setting up your profile...
+15:39:12.183280 [info ]: Info Creating new profile...
+15:39:32.299179 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+15:52:52.332984 [info ]: Success Profile written to /Users/rahimsharifov/.dbt/profiles.yml
+15:52:52.339458 [info ]: Validating profile inputs, adapters, and connection
+
+15:52:52.340478 [info ]: dbt-fusion 2.0.0-preview.153
+15:52:52.346405 [info ]: Started loading project
+15:52:52.369297 [info ]: Loading ~/.dbt/profiles.yml
+15:52:52.382108 [info ]: Finished loading project [  0.04s]
+15:52:52.383873 [info ]: Started debugging
+15:52:52.384103 [info ]: Debugging profile: dev
+15:52:52.384124 [info ]: Debugging dbt version: 2.0.0-preview.153
+15:52:52.384133 [info ]: Debugging platform: macos aarch64 (unix)
+15:52:52.384295 [info ]: Debugging adapter type: databricks (remote)
+15:52:52.410791 [info ]: Debugging dependencies:
+  git: OK
+15:52:52.412908 [info ]: Debugging connection:
+  "schema": "silver",
+  "host": "dbc-c50c826e-04a0.cloud.databricks.com",
+  "http_path": "/sql/1.0/warehouses/04b2b335f7e9f372"
+15:53:19.708924 [debug]: Query executed on node unknown:
+select 1 as id
+15:53:19.710637 [info ]: Debugging connection test: OK
+15:53:19.711521 [info ]: Debugged All checks passed!
+15:53:19.711567 [info ]: Finished debugging [ 27.33s]
+15:53:20.543976 [info ]: New version available 2.0.0-preview.164 (run `dbt system update`)
+15:53:20.642830 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [14m 8s]
