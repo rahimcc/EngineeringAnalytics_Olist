@@ -1,24 +1,11 @@
-with
+{{config(materialized='view', schema='staging')}}
 
-source as (
 
-    -- {# This references seed (CSV) data - try switching to {{ source('ecom', 'raw_customers') }} #}
-    select * from {{ ref('raw_customers') }}
+SELECT 
+    lower(trim(customer_id)) as customer_id ,
+    lower(trim(customer_unique_id)) as customer_unique_id ,
+    lower(trim(customer_zip_code_prefix::STRING)) as customer_zip_code_prefix,
+    lower(trim(customer_city)) as customer_city ,
+    lower(trim(customer_state)) as customer_state 
+FROM  {{ source('bronze','olist_customers')}}
 
-),
-
-renamed as (
-
-    select
-
-        ----------  ids
-        id as customer_id,
-
-        ---------- text
-        name as customer_name
-
-    from source
-
-)
-
-select * from renamed
